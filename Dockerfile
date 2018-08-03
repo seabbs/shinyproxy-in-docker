@@ -6,4 +6,4 @@ RUN wget https://www.shinyproxy.io/downloads/shinyproxy-1.1.1.jar -O /opt/shinyp
 WORKDIR /opt/shinyproxy/
 RUN mkdir app_yml
 
-CMD ["cp", "app_yml/.", ".", "&&", "java", "-jar", "/opt/shinyproxy/shinyproxy.jar"]
+CMD ["bash", "start_shinyproxy.sh"]
