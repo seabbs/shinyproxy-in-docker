@@ -6,4 +6,6 @@ RUN wget https://www.shinyproxy.io/downloads/shinyproxy-1.1.1.jar -O /opt/shinyp
 WORKDIR /opt/shinyproxy/
 RUN mkdir app_yml
 
+COPY ./start_shinyproxy.sh ./start_shinyproxy.sh
+
 CMD ["bash", "start_shinyproxy.sh"]
